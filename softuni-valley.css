@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css?family=Sansita');
+
+header {
+	background-color: #7A0000;
+    height: 170px;
+}
+
+.content-holder {
+	max-width: 90%;
+	margin: 0 auto;
+}
+
+header .logo {
+	text-decoration: none;
+	font-family: font-family: 'Sansita', sans-serif;
+	font-size: 40px;
+	line-height: 35px;
+	float: left;
+	color: #ffffff;
+	padding-top: 40px;
+}
+
+header span {
+	display: block;
+    font-size: 50px;
+    position: absolute;
+	letter-spacing: 5px;
+    margin-left: 70px;
+}
+
+nav {
+	float: right;
+}
+
+nav li {
+	list-style: none;
+	float: left;
+	padding: 20px;
+}
+
+nav a {
+	text-decoration: none;
+    text-align: center;
+    display: block;
+    color: #ffffff;
+}
+
+.home:before {
+	content: url(images/home-softuni-logo.png);
+}
+
+.news:before {
+	content: url(images/news.png);
+}
+
+.team:before {
+	content: url(images/team.png);
+}
+
+.contacts:before {
+	content: url(images/contacts.png);
+}
+
+.home:before, .news:before, .team:before, .contacts:before {
+    padding-bottom: 10px;
+    display: block;
+}
+
+nav li:hover {
+    -webkit-transform:scale(1.25); /* Safari and Chrome */
+    -moz-transform:scale(1.25); /* Firefox */
+    -ms-transform:scale(1.25); /* IE 9 */
+    -o-transform:scale(1.25); /* Opera */
+    transform:scale(1.25);
+}
