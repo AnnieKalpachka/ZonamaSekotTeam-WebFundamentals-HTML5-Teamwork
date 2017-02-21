@@ -1,14 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Sansita');
 
 body {
-	background: rgba(122,0,0,1);
-	background: -moz-linear-gradient(left, rgba(122,0,0,1) 0%, rgba(122,0,0,1) 0%, rgba(122,0,0,1) 25%, rgba(122,0,0,1) 29%, rgba(143,2,34,1) 52%, rgba(109,0,25,1) 73%, rgba(109,0,25,1) 100%);
-	background: -webkit-gradient(left top, right top, color-stop(0%, rgba(122,0,0,1)), color-stop(0%, rgba(122,0,0,1)), color-stop(25%, rgba(122,0,0,1)), color-stop(29%, rgba(122,0,0,1)), color-stop(52%, rgba(143,2,34,1)), color-stop(73%, rgba(109,0,25,1)), color-stop(100%, rgba(109,0,25,1)));
-	background: -webkit-linear-gradient(left, rgba(122,0,0,1) 0%, rgba(122,0,0,1) 0%, rgba(122,0,0,1) 25%, rgba(122,0,0,1) 29%, rgba(143,2,34,1) 52%, rgba(109,0,25,1) 73%, rgba(109,0,25,1) 100%);
-	background: -o-linear-gradient(left, rgba(122,0,0,1) 0%, rgba(122,0,0,1) 0%, rgba(122,0,0,1) 25%, rgba(122,0,0,1) 29%, rgba(143,2,34,1) 52%, rgba(109,0,25,1) 73%, rgba(109,0,25,1) 100%);
-	background: -ms-linear-gradient(left, rgba(122,0,0,1) 0%, rgba(122,0,0,1) 0%, rgba(122,0,0,1) 25%, rgba(122,0,0,1) 29%, rgba(143,2,34,1) 52%, rgba(109,0,25,1) 73%, rgba(109,0,25,1) 100%);
-	background: linear-gradient(to right, rgba(122,0,0,1) 0%, rgba(122,0,0,1) 0%, rgba(122,0,0,1) 25%, rgba(122,0,0,1) 29%, rgba(143,2,34,1) 52%, rgba(109,0,25,1) 73%, rgba(109,0,25,1) 100%);
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7a0000', endColorstr='#6d0019', GradientType=1 );
+	background-color: #ffffff;
 	margin: 0;
 	padding: 0;
 }
@@ -16,23 +9,27 @@ body {
 header {
 	background-color: #7A0000;
     height: 150px;
-    margin-bottom: 60px;
 }
 
-main {
+#news-holder {
 	max-width: 70%;
 	margin: 0 auto;
 	background-color: #DEDEDE;
 	-webkit-box-shadow: 11px 13px 65px 17px rgba(255,255,255,1);
 	-moz-box-shadow: 11px 13px 65px 17px rgba(255,255,255,1);
 	box-shadow: 11px 8px 65px 15px rgba(255,255,255,1);
+	border-radius: 20px;
 }
 
 h1 {
     text-align: center;
-    color: coral;
+    color: white;
     text-transform: uppercase;
     text-shadow: 5px 4px #4d0000;
+    background-color: #2C2A2D;
+    height: 150px;
+    margin-top: 0px;
+    margin-bottom: -60px;
 }
 
 .content-holder {
@@ -104,6 +101,13 @@ nav li:hover {
     transform:scale(1.25);
 }
 
+footer {
+    background-color: #7A0000;
+    height: 55px;
+    padding-top: 5px;
+}
+
 footer p {
 	text-align: center;
+	color: #ffffff;
 }
