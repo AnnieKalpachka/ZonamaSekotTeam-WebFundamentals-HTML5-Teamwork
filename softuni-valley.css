@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Sansita');
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css);
 
 body {
 	background-color: #ffffff;
@@ -21,7 +22,7 @@ header {
 	border-radius: 20px;
 }
 
-h1 {
+h2 {
     text-align: center;
     color: white;
     text-transform: uppercase;
@@ -30,11 +31,18 @@ h1 {
     height: 150px;
     margin-top: 0px;
     margin-bottom: -60px;
+    padding-top: 35px;
+    font-size: 40px;
 }
 
-.content-holder {
-	max-width: 90%;
-	margin: 0 auto;
+.heading {
+	background-color: transparent;
+}
+
+.content-wrapper {
+    margin: 0 auto;
+    display: table;
+    width: 90%;
 }
 
 header .logo {
@@ -44,7 +52,7 @@ header .logo {
 	line-height: 35px;
 	float: left;
 	color: #ffffff;
-	padding-top: 40px;
+	padding-top: 15px;
 }
 
 header span {
@@ -70,6 +78,12 @@ nav a {
     text-align: center;
     display: block;
     color: #ffffff;
+}
+
+h3 {
+	color: #ffffff;
+	text-transform: uppercase;
+	text-align: center;
 }
 
 .home:before {
@@ -101,13 +115,186 @@ nav li:hover {
     transform:scale(1.25);
 }
 
-footer {
-    background-color: #7A0000;
-    height: 55px;
-    padding-top: 5px;
-}
-
-footer p {
+#copyright {
 	text-align: center;
 	color: #ffffff;
+    background-color: #7A0000;
+    height: 55px;
+    margin-top: 0px;
+    clear: both;
+}
+
+footer #contacts {
+	background-color: #303030;
+	height: 300px;
+}
+
+.footer-social-icons {
+    width: 350px;
+    display:block;
+    margin: 0 auto;
+}
+
+.social-icon {
+    color: #fff;
+}
+
+ul.social-icons {
+    padding-left: 0px;
+    margin: 0 auto;
+    display: table;
+}
+
+.social-icons li {
+    vertical-align: top;
+    display: inline;
+}
+
+.social-icons a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.fa-facebook {
+    padding:10px 14px;
+    -o-transition:.5s;
+    -ms-transition:.5s;
+    -moz-transition:.5s;
+    -webkit-transition:.5s;
+    transition: .5s;
+    background-color: #322f30;
+}
+
+.fa-facebook:hover {
+    background-color: #3d5b99;
+}
+
+.fa-twitter {
+    padding:10px 12px;
+    -o-transition:.5s;
+    -ms-transition:.5s;
+    -moz-transition:.5s;
+    -webkit-transition:.5s;
+    transition: .5s;
+    background-color: #322f30;
+}
+
+.fa-twitter:hover {
+    background-color: #00aced;
+}
+.fa-rss {
+    padding:10px 14px;
+    -o-transition:.5s;
+    -ms-transition:.5s;
+    -moz-transition:.5s;
+    -webkit-transition:.5s;
+    transition: .5s;
+    background-color: #322f30;
+}
+
+.fa-rss:hover {
+    background-color: #eb8231;
+}
+.fa-youtube {
+    padding:10px 14px;
+    -o-transition:.5s;
+    -ms-transition:.5s;
+    -moz-transition:.5s;
+    -webkit-transition:.5s;
+    transition: .5s;
+    background-color: #322f30;
+}
+
+.fa-youtube:hover {
+    background-color: #e64a41;
+}
+
+.fa-google-plus {
+    padding:10px 9px;
+    -o-transition:.5s;
+    -ms-transition:.5s;
+    -moz-transition:.5s;
+    -webkit-transition:.5s;
+    transition: .5s;
+    background-color: #322f30;
+}
+
+.fa-google-plus:hover {
+    background-color: #e25714;
+}
+
+.fa-instagram {
+    padding:10px 9px;
+    -o-transition:.5s;
+    -ms-transition:.5s;
+    -moz-transition:.5s;
+    -webkit-transition:.5s;
+    transition: .5s;
+    background-color: #322f30;
+}
+
+.fa-instagram:hover {
+    background-color: #e25714;
+}
+
+.fa-github {
+    padding:10px 9px;
+    -o-transition:.5s;
+    -ms-transition:.5s;
+    -moz-transition:.5s;
+    -webkit-transition:.5s;
+    transition: .5s;
+    background-color: #322f30;
+}
+
+.fa-github:hover {
+    background-color: #e25714;
+}
+
+.initiatives {
+	color: #ffffff;
+}
+
+.contacts-block {
+    float: left;
+    display: inline-block;
+    width: 24%;
+    margin: 0 auto;
+}
+
+.contacts-block:nth-of-type(4) {
+	margin-right: 0px;
+}
+
+.more-contacts li {
+	display: block;
+	color: #ffffff;
+}
+
+.initiatives li {
+	list-style: none;
+	padding-top: 5px;
+}
+
+.initiatives li a {
+	text-decoration: none;
+	color: #ffffff;
+	font-size: 17px;
+    text-transform: capitalize;
+}
+
+input[type="submit"] {
+	text-transform: uppercase;
+	border: none;
+	margin: 0 auto;
+	display: table;
+	border-radius: 10px;
+	height: 30px;
+	width: 200px;
+}
+
+
+.initiatives ul li:hover a {
+    color: orange;
+	cursor: pointer;
 }
