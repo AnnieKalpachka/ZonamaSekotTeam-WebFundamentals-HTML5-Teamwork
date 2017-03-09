@@ -4,6 +4,7 @@
 body {
 	background-color: #ffffff;
 	padding: 0;
+  margin: 0;
   margin-top: 150px;
 }
 
@@ -36,7 +37,7 @@ header .navbar-default {
 }
 
 .navbar-default .navbar-nav > li > a {
-  padding: 20px 15px 10px 15px ;
+  padding: 20px 14px 10px 14px ;
 }
 .navbar-default .navbar-nav > li > a p{
   margin-top: 15px;
@@ -89,11 +90,17 @@ header .navbar-default {
     border: 1px solid green;
     background: #7A0000;
   }
-
-  .navbar-default .navbar-nav > li > a > p {
-    display: inline-block;
+  /*this makes the menu to be blocks and not lines*/
+  .nav> li {
+    --display: inline-block;
   }
 
+  /* puts the menu text under the picture*/
+  .navbar-default .navbar-nav > li > a > p {
+    display: block;
+  }
+
+  /* this makes the menue icon pictures smaller so they can fit inside the mobile menu */
   .navbar-default .navbar-nav > li > a > div {
     display: inline-block;
     width: 48px !important;
@@ -131,10 +138,10 @@ header .navbar-default {
 
 @media(min-width:992px){
   .navbar-right {
-    margin-right: 90px;
+    margin-right: 85px;
   }
   .navbar > .container-fluid .navbar-brand {
-    margin-left: 90px;
+    margin-left: 85px;
   }
 }
 
