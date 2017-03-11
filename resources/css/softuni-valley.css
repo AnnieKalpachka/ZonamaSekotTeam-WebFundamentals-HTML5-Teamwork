@@ -36,12 +36,18 @@ header .navbar-default {
   height: 150px;
 }
 
+.navbar-default .navbar-nav > li {
+  transition: transform 0.5s; /* makes transformation size slower so it will not look jumpy */
+}
+
 .navbar-default .navbar-nav > li > a {
   padding: 20px 14px 10px 14px ;
 }
+
 .navbar-default .navbar-nav > li > a p{
   margin-top: 15px;
 }
+/* puts an image for the link */
 .navbar-default .navbar-nav > li.home > a > div.home-image {
   background: url('../images/home-softuni-logo.png') no-repeat;
   width: 96px;
@@ -49,7 +55,7 @@ header .navbar-default {
   background-size: contain;
   content:"";
 }
-
+/* puts an image for the link */
 .navbar-default .navbar-nav > li.news > a > div.news-image {
   background: url('../images/news.png') no-repeat;
   width: 96px;
@@ -57,7 +63,7 @@ header .navbar-default {
   background-size: contain;
   content:"";
 }
-
+/* puts an image for the link */
 .navbar-default .navbar-nav > li.team > a > div.team-image {
   background: url('../images/team.png') no-repeat;
   width: 96px;
@@ -65,6 +71,8 @@ header .navbar-default {
   background-size: contain;
   content:"";
 }
+
+/* puts an image for the link */
 .navbar-default .navbar-nav > li.contacts > a > div.contacts-image {
   background: url('../images/contacts.png') no-repeat;
   width: 96px;
@@ -85,15 +93,34 @@ header .navbar-default {
   color: #ffffff;
 }
 
+.navbar-default .navbar-nav > li > a:hover {
+  color: #ffffff;
+  transition: text-shadow 0.5s; /* makes the transition slower for text shadow so it wil look slizy */
+  text-shadow: 0px 0px 5px #ffffff ;
+}
+
+/* media queries for small screen */
 @media(max-width:767px){
+  .navbar-default .navbar-nav {
+    margin: 0 auto; /* moves the nav to be a little bit more in right*/
+  }
   .navbar-default .navbar-nav > li {
-    border: 1px solid green;
+    width: 100px; /* fixed width so they look all the same */
+    border: 1px solid #B40000; /* border so they are not looking bad */
+    --box-shadow: 0px 0px 1px 2px rgba(180,0,0,1);
     background: #7A0000;
+    margin: 1px; /* margin so they will not hit each other */
+  }
+
+  nav li:hover {
+    -webkit-transform:scale(0.95); /* Safari and Chrome */
+    -moz-transform:scale(0.95); /* Firefox */
+    -ms-transform:scale(0.95); /* IE 9 */
+    -o-transform:scale(0.95); /* Opera */
+    transform:scale(0.95);
   }
   /*this makes the menu to be blocks and not lines*/
-  .nav> li {
-    --display: inline-block;
-  }
+
 
   /* puts the menu text under the picture*/
   .navbar-default .navbar-nav > li > a > p {
@@ -103,16 +130,41 @@ header .navbar-default {
   /* this makes the menue icon pictures smaller so they can fit inside the mobile menu */
   .navbar-default .navbar-nav > li > a > div {
     display: inline-block;
-    width: 48px !important;
-    height: 25px !important;
+    width: 67.2px !important; /* height = width / 1.92 */
+    height: 35px !important; /* width = height * 1.92 */
   }
+
+  /* pushes the buttonand navigation lower */
+  .navbar-toggle {
+    margin-top: 40px;
+  }
+
+  /* makes the navbar horizontal line to be colored red */
+  .navbar-default .navbar-collapse {
+    border-color: #B40000;
+  }
+
+  /* on small screen display the brand logo in center */
+  .navbar-brand {
+    display: block;
+    text-align: center;
+    float: none;
+  }
+
+  /* puts the logo to top */
+  .navbar-brand h1.logo {
+    margin-top: 0;
+    padding-top: 0;
+  }
+
+  /* fixes span to be centered */
+  .navbar-brand h1.logo span{
+    margin-left: 0;
+  }
+
 }
 
-.navbar-default .navbar-nav > li > a:hover {
-  color: #ffffff;
-  text-shadow: 0px 0px 5px #ffffff ;
-}
-
+/* media queries for bigger screens (md and lg) */
 @media (min-width: 768px) {
   nav li:hover {
     -webkit-transform:scale(1.25); /* Safari and Chrome */
@@ -123,23 +175,33 @@ header .navbar-default {
   }
 }
 
-@media (min-width: 768px)and (max-width: 991px){
+/* media queries for medium screen (md)*/
+@media (min-width: 768px) and (max-width: 991px){
+  /* fixes the right nav margin */
   .navbar-right {
-    margin-right: 10px;
+    margin-right: 6px;
   }
+
+  /* fixes brand logo left margin */
   .navbar > .container-fluid .navbar-brand {
-    margin-left: 10px;
+    margin-left: 6px;
   }
+
+  /* fixes the navigation button sizes so they will not to the logo */
   .navbar-default .navbar-nav > li > a {
     padding: 20px 5px 10px 5px ;
 
   }
 }
 
+/* media queries for large screen (lg) */
 @media(min-width:992px){
+  /* fixes the right side margin of the navigation */
   .navbar-right {
     margin-right: 85px;
   }
+
+  /* fixes the brand logo left margin */
   .navbar > .container-fluid .navbar-brand {
     margin-left: 85px;
   }
