@@ -424,6 +424,8 @@ main .team-info .team-member .member-name {
   margin-bottom: 32px;
   background: #FFFFFF;
   font-size: 3em;
+  font-weight: 600;
+  text-transform: capitalize;
   box-shadow:
           0 0 0 2px rgba(0,0,0,0.6),
           0 0 0 14px #fff,
