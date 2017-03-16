@@ -65,6 +65,7 @@ header .navbar-default {
     height: 50px;
     background-size: contain;
     content: "";
+    display: table;
 }
 /* puts an image for the link */
 
@@ -220,11 +221,12 @@ header .navbar-default {
     /* pushes the button and navigation lower */
     
     .navbar-toggle {
-        margin-top: 37px;
+            margin-top: 0px;
     }
     .navbar-brand h1.logo {
         font-size: 40px;
         line-height: 35px;
+        margin-top: 15px;
     }
     .navbar-brand h1.logo span {
         font-size: 40px;
