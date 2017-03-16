@@ -6,13 +6,8 @@ body {
 	padding: 0;
   margin: 150px 0 0 0;
 }
-.inline-block {
-  display: inline-block;
-}
 
 /** Header Section Styles **/
-
-/* overide the navbar color,border and height */
 
 header nav h1.logo {
   display: inline-block;
@@ -23,6 +18,7 @@ header nav h1.logo {
   color: #ffffff;
   padding-top: 15px;
   text-shadow: 0 0 5px #ffffff ;
+  margin-top: 7px;
 }
 
 header nav h1.logo span {
@@ -268,6 +264,7 @@ header .navbar-default {
   /* fixes the right side margin of the navigation */
   .navbar-right {
     margin-right: 85px;
+    margin-top: 17px;
   }
 
   /* fixes the brand logo left margin */
@@ -282,6 +279,9 @@ header .navbar-default {
 
 /** Main Section Styles**/
 
+#news {
+  background-color: #2C2A2D;
+}
 
 main .news-holder {
 	background-color: #DEDEDE;
@@ -297,12 +297,15 @@ main .news-title {
   margin-top: 0;
   margin-bottom: -35px;
 }
+
 main h2 {
     text-align: center;
     color: white;
     text-transform: uppercase;
     text-shadow: 5px 4px #4d0000;
     font-size: 40px;
+    margin-top: 35px;
+    margin-bottom: 30px;
 }
 
 /* makes <hr class="special" look good > */
@@ -324,14 +327,43 @@ main hr.special:before {
 }
 
 /* Main Section Articles */
-
-main article.article-container {
-  padding: 20px 40px;
-  border-radius: 30px;
-  word-wrap: break-word
+.article-container {
+    padding: 20px 40px;
+    border-radius: 30px;
+    word-wrap: break-word;
+    max-width: 80%;
+    margin: 0 auto;
+    margin-bottom: 45px;
 }
-main article h1 {
+
+.article-container {
+  -webkit-box-shadow: 0px 0px 30px 0px rgba(255, 255, 255, 1);
+  -moz-box-shadow:    0px 0px 30px 0px rgba(255, 255, 255, 1);
+  box-shadow:         0px 0px 30px 0px rgba(255, 255, 255, 1);
+}
+
+.article-container .summary {
   font-weight: bold;
+  color: #7A0000;
+  font-size: 17px;
+  text-align: center;
+}
+
+.article-container .date {
+    text-decoration: underline;
+    font-size: 12px;
+    float: right;
+    color: #7A0000;
+    margin-right: 15px;
+}
+
+#news #news-holder img {
+    margin: 0 auto;
+    display: table;
+    width: 140px;
+    height: 110px;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 main article .article-author span,
@@ -357,11 +389,14 @@ main article header {
 
 /* End of Main Section Articles */
 /* Main Section - Team */
+
 main .team-info {
   min-height: 100px;
   background: #2C2A2D;
   margin-bottom: 30px;
+  height: 420px;
 }
+
 main .team-info .team-members-container {
   height: auto;
 }
@@ -383,58 +418,44 @@ main .team-info .team-member .member-image{
           0 0 8px 17px #acacac;
 }
 
-/* martin image stuff */
-main .team-info .team-member .martin-image {
-  background: url("../images/team/martin.jpg") no-repeat center;
-  background-size: contain;
-}
-main .team-info .team-member .martin-image:hover {
-  background: url("../images/overlay_patern.png"),
-  url("../images/team/martin.jpg") no-repeat center;
-  background-size: contain;
-}
-/* ani image stuff */
-main .team-info .team-member .ani-image {
-  background: url("../images/team/ani.jpg") no-repeat center;
-  background-size: contain;
+.team-member img {
+  width: 200px;
+  height: 200px;
+  margin-bottom: 15px;
 }
 
-main .team-info .team-member .ani-image:hover {
-  background: url("../images/overlay_patern.png"),
-  url("../images/team/ani.jpg") no-repeat center;
-  background-size: contain;
+.team-member .name {
+  font-size: 25px;
+  color: #A74FA4;
+  font-style: italic;
 }
 
-/* peter image stuff */
-main .team-info .team-member .peter-image {
-  background: url("../images/team/peter.jpg") no-repeat center;
-  background-size: contain;
+.team-member .name:hover {
+  text-decoration: underline;
 }
 
-main .team-info .team-member .peter-image:hover {
-  background: url("../images/overlay_patern.png"),
-  url("../images/team/peter.jpg") no-repeat center;
-  background-size: contain;
+.team-member .fa {
+    margin-right: 40px;
+    font-size: 20px;
+    color: #ffffff;
 }
 
-
-
-main .team-info .team-member .member-name {
-  margin-top: 32px;
-  margin-bottom: 32px;
-  background: #FFFFFF;
-  font-size: 3em;
-  font-weight: 600;
-  text-transform: capitalize;
-  box-shadow:
-          0 0 0 2px rgba(0,0,0,0.6),
-          0 0 0 14px #fff,
-          0 0 0 18px rgba(0,0,0,0.2),
-          0 0 8px 17px #acacac;
+.team-member .fa:hover {
+  color: #A74FA4;
 }
+
+.team-member .social-icons {
+    padding-left: 25px;
+}
+
 /* End of Main Section - Team */
 /** End of Main Section Styles **/
 /** Footer Section Styles **/
+
+footer {
+    margin-top: -30px;
+}
+
 footer #contacts {
 	background-color: #2C2A2D;
   min-height: 260px;
@@ -479,10 +500,6 @@ footer .more-contacts li:hover {
 }
 
 /* More Contacts block */
-footer .more-contacts ul {
-  margin-left: 30px;
-}
-
 
 footer .more-contacts li {
     display: block;
@@ -494,6 +511,17 @@ footer .more-contacts li {
 
 /* End of More Contacts block */
 /* Footer social icons Block */
+
+.contact-block {
+  width: 22%;
+}
+
+.contact-wrapper {
+  text-align: center;
+  margin-right: 0 auto;
+  display: table;
+}
+
 footer h3 {
   color: #A74FA4;
   text-transform: uppercase;
