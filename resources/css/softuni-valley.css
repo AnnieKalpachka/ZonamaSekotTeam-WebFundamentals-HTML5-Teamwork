@@ -71,6 +71,7 @@ header .navbar-default {
 .navbar-default .navbar-nav > li.contacts > a > div.contacts-image {
     background: url('../images/contacts.png') no-repeat;
     width: 96px;
+    height: 50px;
     background-size: contain;
     content: "";
 }
