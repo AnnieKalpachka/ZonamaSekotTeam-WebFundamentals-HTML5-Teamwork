@@ -30,7 +30,7 @@ header .navbar-default {
     height: 150px;
 }
 .navbar-default .navbar-nav > li {
-    transition: transform 0.5s;
+    transition: transform 0.4s;
     /* makes transformation size slower so it will not look jumpy */
 }
 .navbar-default .navbar-nav > li > a {
