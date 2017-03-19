@@ -101,16 +101,16 @@ header .navbar-default {
     nav li:hover {
         -webkit-transform: scale(0.95);
         /* Safari and Chrome */
-        
+
         -moz-transform: scale(0.95);
         /* Firefox */
-        
+
         -ms-transform: scale(0.95);
         /* IE 9 */
-        
+
         -o-transform: scale(0.95);
         /* Opera */
-        
+
         transform: scale(0.95);
     }
     /*this makes the menu to be blocks and not lines*/
@@ -120,9 +120,13 @@ header .navbar-default {
         display: block;
     }
     /* makes the navbar horizontal line to be colored red */
-    
+    .navbar-default .navbar-collapse ul {
+        display: inline-block;
+    }
     .navbar-default .navbar-collapse {
+        text-align: center;
         border-color: #B40000;
+        overflow:hidden;
     }
     /* on small screen display the brand logo in center */
     
@@ -221,7 +225,7 @@ header .navbar-default {
     /* pushes the button and navigation lower */
     
     .navbar-toggle {
-            margin-top: 0px;
+            margin-top: 38px;
     }
     .navbar-brand h1.logo {
         font-size: 40px;
@@ -232,6 +236,7 @@ header .navbar-default {
         font-size: 40px;
     }
     .navbar-default .navbar-nav > li {
+        height: 110px;
         width: 100px;
         /* fixed width so they look all the same */
         
@@ -289,6 +294,7 @@ header .navbar-default {
     /* fixes the navigation button sizes so they will not to the logo */
     
     .navbar-default .navbar-nav > li > a {
+        margin-top: 17px;
         padding: 20px 5px 10px 5px;
     }
 }
@@ -297,14 +303,14 @@ header .navbar-default {
 @media(min-width:992px) {
     /* fixes the right side margin of the navigation */
     
-    .navbar-right {
-        margin-right: 85px;
+.    .navbar-right {
+        margin-right: 80px;
         margin-top: 17px;
     }
     /* fixes the brand logo left margin */
     
     .navbar > .container-fluid .navbar-brand {
-        margin-left: 85px;
+        margin-left: 80px;
     }
 }
 /** End of Header Section Styles **/
@@ -360,13 +366,10 @@ main hr.special:before {
     border-radius: 30px;
     word-wrap: break-word;
     max-width: 80%;
-    margin: 0 auto;
-    margin-bottom: 45px;
+    margin: 0 auto 45px auto;
 }
 .article-container {
-    -webkit-box-shadow: 0px 0px 30px 0px rgba(255, 255, 255, 1);
-    -moz-box-shadow: 0px 0px 30px 0px rgba(255, 255, 255, 1);
-    box-shadow: 0px 0px 30px 0px rgba(255, 255, 255, 1);
+    box-shadow: 0 0 30px 0 rgba(255, 255, 255, 1);
 }
 .article-container .summary {
     font-weight: bold;
@@ -382,12 +385,10 @@ main hr.special:before {
     margin-right: 15px;
 }
 #news #news-holder img {
-    margin: 0 auto;
     display: table;
     width: 140px;
     height: 110px;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin: 20px auto;
 }
 main article .article-author span,
 main article .article-date span,
@@ -411,10 +412,9 @@ main article header {
 /* Main Section - Team */
 
 main .team-info {
-    min-height: 100px;
     background: #2C2A2D;
     margin-bottom: 30px;
-    height: 420px;
+    min-height: 420px;
 }
 main .team-info .team-members-container {
     height: auto;
@@ -430,6 +430,10 @@ main .team-info .team-member .member-image {
     height: 200px;
     box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.6), 0 0 0 14px #fff, 0 0 0 18px rgba(0, 0, 0, 0.2), 0 0 8px 17px #acacac;
 }
+.social-container {
+    display: inline-block;
+}
+
 .team-member img {
     width: 200px;
     height: 200px;
@@ -444,16 +448,13 @@ main .team-info .team-member .member-image {
     text-decoration: underline;
 }
 .team-member .fa {
-    margin-right: 40px;
     font-size: 20px;
     color: #ffffff;
 }
 .team-member .fa:hover {
-    color: #A74FA4;
+    color: #FFFFFF;
 }
-.team-member .social-icons {
-    padding-left: 25px;
-}
+
 /* End of Main Section - Team */
 /** End of Main Section Styles **/
 /** Footer Section Styles **/
@@ -463,8 +464,7 @@ footer {
 }
 footer #contacts {
     background-color: #2C2A2D;
-    min-height: 260px;
-    height: 340px;
+    min-height: 340px;
 }
 footer .contacts-block {
     display: inline-block;
@@ -519,7 +519,7 @@ footer .more-contacts li {
 }
 .contact-wrapper {
     text-align: center;
-    margin-right: 0 auto;
+    margin: 0 auto;
     display: table;
 }
 footer h3 {
@@ -544,7 +544,6 @@ footer .apply-button:hover {
     color: #ffffff;
 }
 footer .footer-social-icons-container {
-    width: 350px;
     display: block;
     margin: 0 auto;
 }
@@ -554,15 +553,16 @@ footer .social-icon-link {
     width: 48px;
     height: 48px;
 }
-footer ul.social-icons {
+footer div.social-icons {
     padding-left: 0;
     margin: 0 auto;
     display: table;
 }
-footer .social-icons li {
+footer .social-icons div {
     display: inline-block;
 }
-footer .footer-social-icons-container .fa {
+footer .footer-social-icons-container .fa,
+main .team-info .social-icons .fa{
     width: 48px;
     height: 48px;
     line-height: 48px;
@@ -571,7 +571,8 @@ footer .footer-social-icons-container .fa {
     -webkit-transition: 0.5s;
     transition: 0.5s;
 }
-footer .fa-facebook:hover {
+footer .fa-facebook:hover,
+main .team-info .social-icons .fa-facebook:hover{
     background-color: #4862A3;
 }
 footer .fa-twitter:hover {
@@ -586,11 +587,24 @@ footer .fa-youtube:hover {
 footer .fa-google-plus:hover {
     background-color: #DB4437;
 }
-footer .fa-github:hover {
+footer .fa-github:hover,
+main .team-info .social-icons .fa-github:hover{
     background-color: #5e6469;
 }
 footer .fa-instagram:hover {
-    background-color: #D13C77;
+    background: radial-gradient(circle farthest-corner at 35% 90%, #fec564, transparent 50%),
+    radial-gradient(circle farthest-corner at 0 140%, #fec564, transparent 50%),
+        /* left top */
+    radial-gradient(ellipse farthest-corner at 0 -25%, #5258cf, transparent 50%),
+    radial-gradient(ellipse farthest-corner at 20% -50%, #5258cf, transparent 50%),
+        /* right top */
+    radial-gradient(ellipse farthest-corner at 100% 0, #893dc2, transparent 50%),
+    radial-gradient(ellipse farthest-corner at 60% -20%, #893dc2, transparent 50%),
+        /* right bottom */
+    radial-gradient(ellipse farthest-corner at 100% 100%, #d9317a, transparent),
+        /* create a base coat to smooth */
+        /* corner gradients */
+    linear-gradient(#6559ca, #bc318f 30%, #e33f5f 50%, #f77638 70%, #fec66d 100%);
 }
 /* End of Footer social icons block */
 /* Copyright section */
@@ -608,7 +622,47 @@ footer .fa-instagram:hover {
     letter-spacing: 1px;
     font-weight: 600;
 }
-
+/* swing effect */
+.swing:hover
+{
+    -webkit-animation: swing 1s ease;
+    animation: swing 1s ease;
+    -webkit-animation-iteration-count: 1;
+    animation-iteration-count: 1;
+}
+@keyframes swing
+{
+    15%
+    {
+        -webkit-transform: translateX(5px);
+        transform: translateX(5px);
+    }
+    30%
+    {
+        -webkit-transform: translateX(-5px);
+        transform: translateX(-5px);
+    }
+    50%
+    {
+        -webkit-transform: translateX(3px);
+        transform: translateX(3px);
+    }
+    65%
+    {
+        -webkit-transform: translateX(-3px);
+        transform: translateX(-3px);
+    }
+    80%
+    {
+        -webkit-transform: translateX(2px);
+        transform: translateX(2px);
+    }
+    100%
+    {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+}
 .clear {
     clear: both;
 }
