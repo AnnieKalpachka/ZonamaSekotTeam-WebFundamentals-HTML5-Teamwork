@@ -127,6 +127,7 @@ header .navbar-default {
         text-align: center;
         border-color: #B40000;
         overflow:hidden;
+        margin-top: 33px;
     }
     /* on small screen display the brand logo in center */
     
@@ -160,6 +161,11 @@ header .navbar-default {
     header .navbar-default {
         height: 100px;
     }
+
+    .navbar-header {
+        margin-top: 20px;
+    }
+
     .navbar-brand h1.logo {
         font-size: 20px;
         line-height: 18px;
@@ -170,7 +176,7 @@ header .navbar-default {
     /* pushes the button and navigation lower */
     
     .navbar-toggle {
-        margin-top: 8px;
+        margin-top: -30px;
     }
     /* makes the navbar horizontal line to be colored red */
     
@@ -193,6 +199,7 @@ header .navbar-default {
     }
     .navbar-collapse.in {
         overflow-y: hidden;
+        margin-top: 17px;
     }
     /* this makes the menue icon pictures smaller so they can fit inside the mobile menu */
     
@@ -225,7 +232,7 @@ header .navbar-default {
     /* pushes the button and navigation lower */
     
     .navbar-toggle {
-            margin-top: 38px;
+        margin-top: 5px;
     }
     .navbar-brand h1.logo {
         font-size: 40px;
@@ -519,6 +526,7 @@ footer .more-contacts li {
 }
 .contact-wrapper {
     text-align: center;
+    margin: 0 auto;
     display: table;
 }
 footer h3 {
@@ -610,16 +618,10 @@ footer .fa-instagram:hover {
 
 .copyright-container {
     display: block;
-    min-height: 40px;
+    height: 40px;
     line-height: 40px;
     background-color: #7A0000;
     text-align: center;
-}
-@media(max-width:767px) {
-  .copyright-container {
-    line-height: 20px;
-    padding-top: 10px;
-  }
 }
 .copyright {
     color: #FFFFFF;
