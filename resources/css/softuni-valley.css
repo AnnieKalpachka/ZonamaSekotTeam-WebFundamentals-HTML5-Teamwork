@@ -366,6 +366,7 @@ main hr.special:before {
     border-radius: 30px;
     word-wrap: break-word;
     max-width: 80%;
+    min-height: 230px;
     margin: 0 auto 45px auto;
 }
 .article-container {
