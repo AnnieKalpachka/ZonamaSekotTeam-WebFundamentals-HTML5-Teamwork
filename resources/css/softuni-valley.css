@@ -519,7 +519,6 @@ footer .more-contacts li {
 }
 .contact-wrapper {
     text-align: center;
-    margin: 0 auto;
     display: table;
 }
 footer h3 {
@@ -611,10 +610,16 @@ footer .fa-instagram:hover {
 
 .copyright-container {
     display: block;
-    height: 40px;
+    min-height: 40px;
     line-height: 40px;
     background-color: #7A0000;
     text-align: center;
+}
+@media(max-width:767px) {
+  .copyright-container {
+    line-height: 20px;
+    padding-top: 10px;
+  }
 }
 .copyright {
     color: #FFFFFF;
