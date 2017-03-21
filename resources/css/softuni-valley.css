@@ -506,13 +506,9 @@ footer .more-contacts li {
 /* End of More Contacts block */
 /* Footer social icons Block */
 
-.contact-block {
-    width: 22%;
-}
 .contact-wrapper {
     text-align: center;
     margin: 0 auto;
-    display: table;
 }
 footer h3 {
     color: #A74FA4;
