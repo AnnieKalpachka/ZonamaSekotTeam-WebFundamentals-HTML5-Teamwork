@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css?family=Sansita');
-@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css");
 body {
     background-color: #ffffff;
     padding: 0;
@@ -310,7 +308,7 @@ header .navbar-default {
 @media(min-width:992px) {
     /* fixes the right side margin of the navigation */
     
-.    .navbar-right {
+   .navbar-right {
         margin-right: 80px;
         margin-top: 17px;
     }
@@ -326,20 +324,7 @@ header .navbar-default {
 #news {
     background-color: #2C2A2D;
 }
-main .news-holder {
-    background-color: #DEDEDE;
-    -webkit-box-shadow: 11px 8px 65px 15px rgba(255, 255, 255, 1);
-    -moz-box-shadow: 11px 8px 65px 15px rgba(255, 255, 255, 1);
-    box-shadow: 11px 8px 65px 15px rgba(255, 255, 255, 1);
-    border-radius: 30px;
-}
-main .news-title {
-    padding-top: 35px;
-    height: 150px;
-    background-color: #2C2A2D;
-    margin-top: 0;
-    margin-bottom: -35px;
-}
+
 h2 {
     text-align: center;
     color: white;
@@ -349,36 +334,20 @@ h2 {
     margin-top: 35px;
     margin-bottom: 30px;
 }
-/* makes <hr class="special" look good > */
 
-main hr.special {
-    height: 30px;
-    border: 0 solid #8c8b8b;
-    border-top-width: 1px;
-    border-radius: 20px;
-}
-main hr.special:before {
-    display: block;
-    content: "";
-    height: 30px;
-    margin-top: -30px;
-    border: 0 solid #8c8b8b;
-    border-bottom-width: 1px;
-    border-radius: 20px;
-}
 /* Main Section Articles */
 
 .article-container {
     padding: 20px 40px;
     border-radius: 30px;
     word-wrap: break-word;
+    text-align: justify;
     max-width: 80%;
-    min-height: 230px;
+    min-height: 250px;
     margin: 0 auto 45px auto;
-}
-.article-container {
     box-shadow: 0 0 30px 0 rgba(255, 255, 255, 1);
 }
+
 .article-container .summary {
     font-weight: bold;
     color: #7A0000;
@@ -386,17 +355,32 @@ main hr.special:before {
     text-align: center;
 }
 .article-container .date {
+    display: block;
     text-decoration: underline;
     font-size: 12px;
-    float: right;
     color: #7A0000;
+
     margin-right: 15px;
+    font-weight: 900;
+    text-align: right;
 }
 #news #news-holder img {
-    display: table;
+    display: inline-block;
     width: 140px;
     height: 110px;
-    margin: 20px auto;
+}
+.img-left {
+    float: left;
+    margin: 0 10px 20px 0;
+}
+.img-right {
+    float: right;
+    margin: 0 0 20px 10px;
+}
+.article-image-container {
+    display: inline-block;
+    width: 140px;
+    height: 110px;
 }
 main article .article-author span,
 main article .article-date span,
@@ -673,4 +657,21 @@ footer .fa-instagram:hover {
 }
 .clear {
     clear: both;
+}
+/* makes <hr class="special" look good > */
+hr.special {
+    height: 30px;
+    border: 0 solid #8c8b8b;
+    border-top-width: 1px;
+    border-radius: 20px;
+}
+
+hr.special:before {
+    display: block;
+    content: "";
+    height: 30px;
+    margin-top: -31px;
+    border: 0 solid #8c8b8b;
+    border-bottom-width: 1px;
+    border-radius: 20px;
 }
